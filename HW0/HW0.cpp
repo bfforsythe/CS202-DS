@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string> 
 #include <stdio.h>
+#include "JekyllHyde.h"
 
 
 // ------------------------------------------------------- HW0 Main Program - C to F calculator -------------------------------
@@ -60,3 +61,8 @@ int main(int argc, const char* argv[]) {
 // --------------------------------------------------------- HW0 A1 Script Reader ------------------------------------------------------------------
 
 
+// This will print the entire last chapter of The Strange Case of Dr. Jekyll and Mr. Hyde
+
+int main() {
+	readingQuiz();
+}

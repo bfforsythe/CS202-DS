@@ -3,11 +3,13 @@
 #include <string>
 #include <chrono>
 #include <algorithm>
+#include <fstream>
+#include <sstream>
 
 
 
 // ------------------------------------------------------ HW01 Main Stopwatch Timer -----------------------------------------
-
+/*
  using namespace std::chrono;
 
 
@@ -74,12 +76,26 @@ int main() {
 
 // -------------------------------------------------------- HW01A1 Audible Too -----------------------------------------------
 
-
+/*
 int main() {
 
+	StopWatch brandDeal;
+
+	brandDeal.Start();
+
+	std::ifstream in("pg64317.txt");
+
+	std::string stringy;
+
+	if (in) {
+		std::ostringstream out;
+		out << in.rdbuf();
+		stringy = out.str();
+
+		std::cout << stringy;
+	}
+
+	brandDeal.Stop();
 
 
-
-
-
-}
+} */

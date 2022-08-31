@@ -141,6 +141,16 @@
   <ItemGroup>
     <ClCompile Include="HW01.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Library.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="52521-0.txt" />
+    <Text Include="766-0.txt" />
+    <Text Include="pg2267.txt" />
+    <Text Include="pg514.txt" />
+    <Text Include="pg64317.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

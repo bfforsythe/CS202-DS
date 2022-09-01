@@ -144,10 +144,9 @@ int main() {
 } */
 
 
+
 // Lab 3 - Smart Pointers
-
-
-#include <memory>
+/* #include <memory>
 
 class PointerTest {
 
@@ -185,18 +184,18 @@ int main() {
 
 	// Unique Pointers
 
-	/*cout << "Unique pointer is created then deleted because of std::unique" << "\n\n";
+	// cout << "Unique pointer is created then deleted because of std::unique" << "\n\n";
 
-	std::unique_ptr<PointerTest> uniqPtr = std::make_unique<PointerTest>();
+	//std::unique_ptr<PointerTest> uniqPtr = std::make_unique<PointerTest>();
 
 
-	std::unique_ptr<PointerTest> uniqCopy = std::move(uniqPtr);								
+	//std::unique_ptr<PointerTest> uniqCopy = std::move(uniqPtr);								
 
-	cout << "\n This is a copy of the uniqPtr pointer: ";
+	//cout << "\n This is a copy of the uniqPtr pointer: ";
 
-	uniqCopy->Dummy(1);
+	//uniqCopy->Dummy(1);
 
-	cout << std::endl; */
+	//cout << std::endl; 
 
 
 	
@@ -218,4 +217,8 @@ int main() {
 
 
 	return(0);
-}
+} */
+
+
+
+// Lab 4 - Binary Files

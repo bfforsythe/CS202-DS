@@ -7,8 +7,10 @@ using std::cout;
 using std::cin;
 using std::string;
 
-/*
+
 // Lab 1 - Control Review
+/*
+
 
 void functionCall(std::string aloha) {
 
@@ -114,9 +116,7 @@ int main() {
 
 
 // Lab 2 - Constructors and Destructors
-
-
-#include "Lab2.h"
+/*#include "Lab2.h"
 
 int main() {
 
@@ -141,4 +141,81 @@ int main() {
 	VectorConstruct e(5, 6, 10, 2, 4);
 
 
+} */
+
+
+// Lab 3 - Smart Pointers
+
+
+#include <memory>
+
+class PointerTest {
+
+public:
+
+	PointerTest() {
+
+		std::cout << " Pointer Created ";
+
+
+
+	}
+
+	~PointerTest() {
+
+		std::cout << " Destroyed pointer ";
+	}
+
+	void Dummy(int test) {
+		cout << test;
+	}
+
+};
+
+int main() {
+
+	
+	// Raw Pointers
+
+	//PointerTest* pointerarray = new PointerTest[4];			// This points to PointerTest, since it's not deleted, it can't be destroyed.
+	//delete[] pointerarray;									// This allows the array to be destroyed
+
+
+
+
+	// Unique Pointers
+
+	/*cout << "Unique pointer is created then deleted because of std::unique" << "\n\n";
+
+	std::unique_ptr<PointerTest> uniqPtr = std::make_unique<PointerTest>();
+
+
+	std::unique_ptr<PointerTest> uniqCopy = std::move(uniqPtr);								
+
+	cout << "\n This is a copy of the uniqPtr pointer: ";
+
+	uniqCopy->Dummy(1);
+
+	cout << std::endl; */
+
+
+	
+	// Shared Pointer
+
+	std::shared_ptr<PointerTest> sharePtr = std::make_shared<PointerTest>();
+
+	cout << "\nShare Pointers Remaining after Destruction: 1  (This is sharePtr)" << std::endl;
+
+
+	{
+
+		std::shared_ptr<PointerTest> ptr1;
+
+		cout << "Share Pointers Remaining after Destruction: 0  (this is ptr1)" << std::endl;
+
+
+	}
+
+
+	return(0);
 }

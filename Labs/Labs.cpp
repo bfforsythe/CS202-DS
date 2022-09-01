@@ -7,7 +7,7 @@ using std::cout;
 using std::cin;
 using std::string;
 
-
+/*
 // Lab 1 - Control Review
 
 void functionCall(std::string aloha) {
@@ -108,4 +108,36 @@ int main() {
 		for (int i : newVec) {
 			cout << i << " "; 
 		}
+}
+*/
+
+
+
+// Lab 2 - Constructors and Destructors
+
+
+#include "Lab2.h"
+
+int main() {
+
+	DefaultConst();
+
+	cout << std::endl << std::endl;
+
+
+	ParamTest a(1, 2);
+
+	cout << std::endl << std::endl;
+
+
+	OtherConstruct b("Hello", 5, 'a');
+
+	OtherConstruct c = b;
+	cout << "Copied : " << " CopyString = " << c.getstring() << " copyInt = " << c.getY() << " copyChar = " << c.getZ();
+
+	cout << std::endl << std::endl;
+
+
+
+
 }

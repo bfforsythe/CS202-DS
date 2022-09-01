@@ -66,4 +66,28 @@ public:
 
 };
 
+
+class VectorConstruct {
+
+
+public:
+
+	VectorConstruct(int one, int two, int three, int four, int five) {
+
+		std::vector<int> constructVec = { one,two,three,four,five };
+
+		std::cout << "Constructed Vector: ";
+
+		for (int i = 0; i < constructVec.size(); i++) {
+			std::cout << constructVec.at(i) << " ";
+		}
+		cout << std::endl << std::endl;
+	}
+
+	~VectorConstruct() {
+		cout << "VectorConstruct Destroyed" << "\n";
+	}
+
+};
+
 #endif // !Lab2

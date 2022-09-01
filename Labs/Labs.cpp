@@ -138,6 +138,7 @@ int main() {
 	cout << std::endl << std::endl;
 
 
+	VectorConstruct e(5, 6, 10, 2, 4);
 
 
 }

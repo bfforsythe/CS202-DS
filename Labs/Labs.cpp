@@ -222,3 +222,40 @@ int main() {
 
 
 // Lab 4 - Binary Files
+
+#include <fstream>
+#include <iostream>
+
+
+int main() {
+	std::ifstream goodeve;
+	std::ofstream goodday;
+	string output;
+
+	goodeve.open("goodevening.txt");
+
+
+
+	if (goodeve.is_open()) {
+
+
+		while (!goodeve.eof()) {
+
+			goodeve >> output;
+			cout << output << " ";
+		
+
+
+		}
+		goodeve.close();
+	}
+
+	goodday.open("goodevening.txt");
+
+	goodday << "A good evening to you as well";
+
+	goodday.close();
+
+
+
+}

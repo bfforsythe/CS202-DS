@@ -143,9 +143,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lab2.h" />
+    <ClInclude Include="Lab7.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="goodevening.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data.dat" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

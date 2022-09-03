@@ -23,10 +23,18 @@
     <ClInclude Include="Lab2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Lab7.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="goodevening.txt">
       <Filter>Resource Files</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data.dat">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

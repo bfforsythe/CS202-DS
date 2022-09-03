@@ -221,41 +221,90 @@ int main() {
 
 
 
-// Lab 4 - Binary Files
-
+// Lab 4 - Streams
+/*
 #include <fstream>
-#include <iostream>
 
 
 int main() {
-	std::ifstream goodeve;
-	std::ofstream goodday;
-	string output;
 
-	goodeve.open("goodevening.txt");
+	std::ofstream out;
+
+	out.open("goodevening.txt", std::ios_base::app);
+
+	std::cout << "Please Enter a Line of Text, and how many lines to add: ";
+
+	int lines;
+	std::string newText;
+
+	cin >> newText >> lines;
+	for (int i = 0; i < lines; i++) {
+
+		out << newText;
+		out << "\n";
 
 
-
-	if (goodeve.is_open()) {
-
-
-		while (!goodeve.eof()) {
-
-			goodeve >> output;
-			cout << output << " ";
-		
-
-
-		}
-		goodeve.close();
 	}
 
-	goodday.open("goodevening.txt");
-
-	goodday << "A good evening to you as well";
-
-	goodday.close();
 
 
+} 
+*/
 
+
+
+// Lab 5 Binary Files
+/*
+#include <fstream>
+
+
+int main() {
+	int integers;
+	std::vector<int> dataVec;
+
+	std::ifstream data;
+	data.open("data.dat", std::ifstream::binary);
+
+	while (data.read((char*)&integers,sizeof(integers))) {
+		
+		dataVec.push_back(integers);
+	}
+
+	cout << "The binary file contains: " << dataVec.size() << " integers. \n";
+
+	int summand = 0;
+	for (int i = 0; i < dataVec.size(); i++) {
+		summand = summand + dataVec[i];
+	}
+
+	cout << "The sum of integers is: " << summand << std::endl;
+
+	double average = 0;
+
+	average = summand / dataVec.size();
+
+	cout << "The average integer is: " << average << std::endl;
+
+
+	return(0);
+} */
+
+
+
+// Lab 6 - Catch2
+
+// Lab 6a - Optional Namespace
+
+
+// Lab 7 - Intro to Overload
+
+#include "Lab7.h"
+
+int main() {
+
+
+	const Funk f;
+
+	std::cout << f << std::endl;
 }
+

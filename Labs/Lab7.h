@@ -11,15 +11,34 @@
 
 class Funk {
 
-public:
+	int objectCounter;
+	static int objCount;
 
-	Funk() {
-		std::cout << "Funk has been Constructed" << std::endl;
+public:
+	
+	static void construct() {
+
+		std::string construction;
+		construction = "Funk has been Constructed";
+		std::cout << construction << std::endl;
+
 
 	}
 
+	static void countObjects() {
 
-	
+		cout << "count: " << objCount << std::endl;
+
+	}
+
+	Funk() {
+		Funk::construct();
+
+		objectCounter = objCount++;
+	}
+
+
+
 
 	~Funk() {
 		std::cout << "Funk has been Destructed";
@@ -28,8 +47,6 @@ public:
 
 
 }; // End of Funk :(
-
-
 
 
 

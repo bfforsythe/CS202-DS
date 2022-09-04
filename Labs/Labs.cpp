@@ -5,6 +5,7 @@
 
 using std::cout;
 using std::cin;
+using std::endl;
 using std::string;
 
 
@@ -296,15 +297,94 @@ int main() {
 // Lab 6a - Optional Namespace
 
 
-// Lab 7 - Intro to Overload
-
-#include "Lab7.h"
+// Lab 7 - Intro to Overload (WIP)
+/* #include "Lab7.h"
 
 int main() {
 
 
-	const Funk f;
 
-	std::cout << f << std::endl;
+} */
+
+
+
+// Lab 8 - uses of Static
+
+/*#include "Lab7.h"
+
+int s_i = 0; // static 0, see header.
+int Funk::objCount;
+
+int main() {
+
+	 // experiment 1
+
+	//cout << s_i;
+
+
+
+
+	// expirement 2
+
+	Funk test1, test2;
+
+	Funk::countObjects();
+	
+
+
+}
+*/
+
+
+
+// Lab 9 - Overload Arithmetic ( WIP )
+
+/*
+main() {
+
+#include "Lab9.h"
+
+
+
+}
+
+*/
+
+
+// Lab 10 - Exceptions
+
+
+void functionC() {
+	
+	std::vector<int> vect;
+
+}
+
+void functionB() {
+	cout << "Starting functionB()" << endl;
+	functionC();
+	cout << "Ending functionB()" << endl;
+}
+
+void functionA() {
+	std::vector<int> vect;
+	functionB();
+
+	try {
+		if (vect.size() == 0) {
+			throw std::runtime_error("error - vector empty");
+		}
+	}
+	catch (std::runtime_error &e){
+		cout << "Caught an exception: " << e.what() << endl;
+	}
+
+
+}
+int main() {
+	cout << "Starting main()" << endl;
+	functionA();
+	cout << "Ended normally." << endl;
+	return 0;
 }
 

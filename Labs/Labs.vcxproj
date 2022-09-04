@@ -140,10 +140,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Labs.cpp" />
+    <ClCompile Include="staticTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lab2.h" />
     <ClInclude Include="Lab7.h" />
+    <ClInclude Include="Lab9.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="goodevening.txt" />

@@ -353,7 +353,7 @@ main() {
 
 // Lab 10 - Exceptions
 
-
+/*/
 void functionC() {
 	
 	std::vector<int> vect;
@@ -388,3 +388,48 @@ int main() {
 	return 0;
 }
 
+*/
+
+
+// Lab 11 - Inheritance
+/*
+int main() {
+
+	class Inherit {
+		int variable = 0;
+	public:
+		
+		Inherit() {
+			cout << "Default Constructed for Inherit" << endl;
+			variable = 5;
+		}
+
+		~Inherit() {
+			cout << "Destructor Destructed for Inherit" << endl;
+		}
+
+
+	};
+
+	
+	class Child : private Inherit {
+
+	public:
+		Child() {
+			cout << "Default Constructed for Child" << endl;
+		}
+
+		~Child() {
+			cout << "Default Destructed for Child" << endl;
+		}
+
+
+
+	};
+
+	Inherit();
+	Child();
+} */
+
+
+// Lab 12 - Polymorphism

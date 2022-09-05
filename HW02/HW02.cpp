@@ -89,3 +89,32 @@ int main() {
 
 
 */
+
+
+
+
+// Program 2 - Memory Layout
+
+int static_data;
+
+void printPointer(int i) {
+	int* iptr = &i;
+
+
+	cout << "&i = " << iptr << " 'Code' Storage" << endl;
+}
+
+int main() {
+
+	printPointer(1);
+
+	int stack_data;
+
+	if (&stack_data < &static_data) {
+		cout << &stack_data <<" - Stack" <<  endl;
+		cout << &static_data <<" - Static Global Variable" << endl;
+	}
+
+	cout << "Note: Free Store is dependent on system wide memory";
+
+}

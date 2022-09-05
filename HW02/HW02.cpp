@@ -95,7 +95,7 @@ int main() {
 
 // Program 2 - Memory Layout
 
-int static_data;
+/*int static_data;
 
 void printPointer(int i) {
 	int* iptr = &i;
@@ -117,4 +117,4 @@ int main() {
 
 	cout << "Note: Free Store is dependent on system wide memory";
 
-}
+} */

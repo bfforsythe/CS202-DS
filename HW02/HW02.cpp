@@ -7,6 +7,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
+
 // Program 1 - List Testing
 
 /*
@@ -118,3 +119,37 @@ int main() {
 	cout << "Note: Free Store is dependent on system wide memory";
 
 } */
+
+
+
+// HW02 A1 - Lowercase Letters
+
+
+
+void to_lower(char* s) {
+
+	for (int i = 0; i < 100; i++) {
+
+		int c = s[i];
+
+		if (isupper(c)) {
+			
+			s[i] = s[i] + 32;
+
+		}
+		
+	}
+	
+
+}
+
+int main() {
+
+	char b[100] = "ThE fItNeSs GrAm PaCeR TeSt";
+
+	to_lower(b);
+
+	cout << b;
+
+	return(0);
+}

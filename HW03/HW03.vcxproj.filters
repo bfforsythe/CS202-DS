@@ -26,5 +26,8 @@
     <Text Include="leagues.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="testParagraph.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

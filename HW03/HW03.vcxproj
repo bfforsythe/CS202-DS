@@ -146,6 +146,9 @@
     <Text Include="testParagraph.txt" />
     <Text Include="token.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="DOOM1.WAD" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

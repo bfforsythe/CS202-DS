@@ -60,6 +60,7 @@ int main() {
 
 //HW03 A1 - Pretty Text
 
+/*
 void textPrinter(std::string fileName, int wrap) {
 	int periodCounter = 0;
 	std::string goodline;
@@ -130,3 +131,55 @@ int main(int argc,  char** argv) {
 	textPrinter(argv[1], wrapper);
 
 }
+
+*/
+
+
+
+// HW03 A2 - DOOM WADs
+
+/*
+
+class WadFile {
+public: 
+	void read(const char* path) {
+		std::ifstream input;
+		input.open(path, std::ios::in | std::ios::binary);
+
+		
+		input.seekg(0);
+
+		char y = 1;
+		input.read((char*)y, sizeof(WadFile) * 10);
+
+		
+
+	}
+
+	void write(const char* path) {
+
+
+	}
+
+};
+
+
+int main(int argc, char**argv) {
+
+	WadFile wf;
+	
+	wf.read("DOOM1.WAD");
+
+
+	return(0);
+	
+
+}
+
+*/
+
+
+
+// HW03 A3 - OpenGL
+
+

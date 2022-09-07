@@ -182,4 +182,40 @@ int main(int argc, char**argv) {
 
 // HW03 A3 - OpenGL
 
+#include <windows.h>
+#include <GLFW/glfw3.h>
 
+void draw() {
+
+
+}
+
+int main(){
+
+	GLFWwindow* window;
+
+	if (!glfwInit()) { return(-1); }
+
+	window = glfwCreateWindow(1920, 1080, "Hello World", NULL, NULL);
+
+	glfwMakeContextCurrent(window);
+
+	while (!glfwWindowShouldClose(window)) {
+
+		// clear the screen to something other than black
+		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		// draw a triangle that covers the screen
+		glBegin(GL_TRIANGLES);
+		glColor3f(1.0f, 0.0f, 0.0f); glVertex3f(-1.0f, -1.0f, 0.0f);
+		glColor3f(0.0f, 1.0f, 0.0f); glVertex3f(0.0f, 1.0f, 0.0f);
+		glColor3f(0.0f, 0.0f, 1.0f); glVertex3f(1.0f, -1.0f, 0.0f);
+		
+
+		glDrawArrays(GL_TRIANGLES, 0, 3);
+		glfwSwapBuffers(window);
+	}
+
+	glfwTerminate();
+	return 0;
+}

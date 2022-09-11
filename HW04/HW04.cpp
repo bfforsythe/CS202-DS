@@ -53,44 +53,39 @@ int main() {
 
 #include <algorithm>
 #include <random>
+#include "Wump.h"
 
 
 
 
 int main() {
-	// Cave generator
 	srand((unsigned)time(NULL));
+	bool gameOver = false;
+	Bits bat;
+	Generator gen;
 
-	std::vector<int> cave;
+	gen.generate();
+	bat.randomBats();
+	bat.randomPits();
 
-	for (int z = 2; z <= 15; z++) {
-		cave.push_back(z);
-	}
-
-	int n = cave.size();
-
-	for (int i = 0; i < n - 1; i++)
-	{
-		int j = i + rand() % (n - i);
-		std::swap(cave[i], cave[j]);
-	}
-
-	cave.insert(cave.begin(), 1);
-
-	for (int y = 0; y < cave.size(); y++) {
-		cout << cave.at(y) << ", ";
-	}
-	// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 	// Player Handler
-
-	int playerState = 1; // Player should always begin at 1st square
-
+	PlayerHandle player;
 
 
+	while (!gameOver) {
+		int roomNo = 0;
+		cin >> roomNo;
+		player.move(roomNo);
+
+	}
+
+}
 
 
-} 
+
+
+
 
 
 

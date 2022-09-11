@@ -50,7 +50,7 @@ int main() {
 
 
 // HW04 A1 - Hunt the Wump
-/*
+
 #include <algorithm>
 #include <random>
 
@@ -82,15 +82,21 @@ int main() {
 	}
 	// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+	// Player Handler
+
+	int playerState = 1; // Player should always begin at 1st square
 
 
 
 
-} */
+
+} 
 
 
 
 // HW04 A2 - Speed Coding
+
+/*
 #include "Streams.h"
 #include "Containers.h"
 #include "Memory.h"
@@ -130,4 +136,4 @@ int main() {
 	cout << "Pointers currently exist: " << *eee << ", " << *ptr;
 
 
-}
+} */

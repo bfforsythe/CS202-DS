@@ -8,6 +8,10 @@ using std::cin;
 using std::endl;
 
 
+
+// HW04 P1 - Boxes
+
+/*
 void Box::setWidth(int width) {
 	_width = width;
 }
@@ -41,5 +45,22 @@ int main() {
 	check.setWidth(4);
 	check.type();
 	check.print(); 
+
+} */
+
+
+// HW04 A1 - Hunt the Wump
+
+#include <random>
+
+void randomizeGen() {
+
+
+
+
+}
+
+int main() {
+
 
 }

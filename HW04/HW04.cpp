@@ -50,17 +50,84 @@ int main() {
 
 
 // HW04 A1 - Hunt the Wump
-
+/*
+#include <algorithm>
 #include <random>
 
-void randomizeGen() {
 
 
-
-
-}
 
 int main() {
+	// Cave generator
+	srand((unsigned)time(NULL));
+
+	std::vector<int> cave;
+
+	for (int z = 2; z <= 15; z++) {
+		cave.push_back(z);
+	}
+
+	int n = cave.size();
+
+	for (int i = 0; i < n - 1; i++)
+	{
+		int j = i + rand() % (n - i);
+		std::swap(cave[i], cave[j]);
+	}
+
+	cave.insert(cave.begin(), 1);
+
+	for (int y = 0; y < cave.size(); y++) {
+		cout << cave.at(y) << ", ";
+	}
+	// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+
+
+} */
+
+
+
+// HW04 A2 - Speed Coding
+#include "Streams.h"
+#include "Containers.h"
+#include "Memory.h"
+
+int main() {
+
+	cout << "File test:   ";
+
+	FileIO inOut;
+
+	inOut.write("This just in, a new world record has been broken");
+
+	inOut.read();
+
+
+	cout << "\n\n\n\n";
+
+	cout << "Vector Test:     " << std::endl << endl;
+	VectorSpeedrun vs;
+
+	vs.storage(1);
+	vs.storage(5);
+	vs.storage(11);
+	vs.storage(56);
+	vs.storage(8);
+
+	vs.retrieve();
+
+	vs.search(11);
+
+	
+	cout << "\n\n\n Heap Test: " << endl;
+	Ptr ptr(new int());
+	Ptr eee(new int());
+	*eee = 400;
+	*ptr = 20;
+	cout << "Pointers currently exist: " << *eee << ", " << *ptr;
 
 
 }

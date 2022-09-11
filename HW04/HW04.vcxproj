@@ -143,6 +143,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Box.h" />
+    <ClInclude Include="Containers.h" />
+    <ClInclude Include="Memory.h" />
+    <ClInclude Include="Streams.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="streams.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

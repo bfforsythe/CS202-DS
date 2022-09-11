@@ -59,26 +59,10 @@ int main() {
 
 
 int main() {
-	srand((unsigned)time(NULL));
-	bool gameOver = false;
-	Bits bat;
-	Generator gen;
-
-	gen.generate();
-	bat.randomBats();
-	bat.randomPits();
+	srand(unsigned(time(0)));
 
 
-	// Player Handler
-	PlayerHandle player;
 
-
-	while (!gameOver) {
-		int roomNo = 0;
-		cin >> roomNo;
-		player.move(roomNo);
-
-	}
 
 }
 

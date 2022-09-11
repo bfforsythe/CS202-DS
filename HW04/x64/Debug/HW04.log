@@ -1,3 +1,4 @@
 ﻿  HW04.cpp
-C:\Users\Brandon\source\repos\bfforsythe\CS202-DS\HW04\Wump.h(33,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Brandon\source\repos\bfforsythe\CS202-DS\HW04\Wump.h(166): warning C4715: 'Map::movePlayer': not all control paths return a value
+C:\Users\Brandon\source\repos\bfforsythe\CS202-DS\HW04\Wump.h(197): warning C4715: 'Map::shoot': not all control paths return a value
   HW04.vcxproj -> C:\Users\Brandon\source\repos\bfforsythe\CS202-DS\HW04\x64\Debug\HW04.exe

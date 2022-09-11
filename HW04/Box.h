@@ -25,10 +25,11 @@ private:
 public:
 
 
-
-
+	virtual std::string type() = 0;
 
 	virtual void print(std::ostream& os) const {} // Virtual print
+
+
 
 	int getWidth() {
 		return(_width);
@@ -54,6 +55,13 @@ public:
 
 	FilledBox() {};
 
+	std::string type() {
+		cout << "Filled:";
+		cout << endl;
+		return std::string("Filled:");
+		
+	}
+
 	void print()  {
 		for (int j = 0; j < Box::getHeight(); j++) {
 
@@ -74,6 +82,13 @@ class HollowBox : public Box { // Prints a Hollow box
 public:
 
 	HollowBox() {};
+
+	std::string type() {
+		cout << "Hollow:";
+		cout << endl;
+		return std::string("Hollow:");
+		cout << endl;
+	}
 
 	void print() {
 		for (int j = 1; j <= Box::getHeight(); j++) {
@@ -106,12 +121,39 @@ public:
 
 
 class CheckeredBox : public Box { // Prints Checkered box
+public:
+
 
 	CheckeredBox() {};
 
+	std::string type() {
+
+		cout << "Checkered:";
+		cout << endl;
+		return std::string("Checkered:");
+		cout << endl;
+	}
+	
 	void print() {
 
+		for (int i = 0; i < Box::getHeight(); i++) {
 
+			for (int j = 0; j < Box::getWidth(); j++) {
+
+				if (i % 2 == 0) {
+					cout << "*" << " ";
+					j++;
+				}
+				else {
+					cout << " " << "*";
+					j++;
+				}
+
+
+			}
+			cout << endl;
+
+		}
 
 
 

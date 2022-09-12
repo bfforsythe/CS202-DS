@@ -433,7 +433,7 @@ int main() {
 
 
 // Lab 12 - Polymorphism
-
+/*
 class Base {
 public:
 	virtual void fooVirtual() const { cout << "Base class virtual function\n"; }
@@ -503,4 +503,33 @@ int main() {
 
 	return 0;
 
+} */
+
+
+
+// Lab 13 - Function Templates
+
+template<typename T>
+
+auto twice(T x) {
+	x = x + x;
+	return(x);
+	
+}
+
+template<const char *str>
+struct cts {
+	void p() { std::cout << str << str; }
+};
+ char cstring[] = "world";
+
+
+
+int main() {
+	cout << twice(2) << endl;
+	cout << twice(2.3) << endl;
+	cout << twice(string("Hello")) << endl;
+
+	cts<cstring> o;
+	o.p();
 }

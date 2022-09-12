@@ -309,7 +309,6 @@ int main() {
 
 
 // Lab 8 - uses of Static
-
 /*#include "Lab7.h"
 
 int s_i = 0; // static 0, see header.
@@ -338,7 +337,6 @@ int main() {
 
 
 // Lab 9 - Overload Arithmetic ( WIP )
-
 /*
 main() {
 
@@ -351,8 +349,8 @@ main() {
 */
 
 
-// Lab 10 - Exceptions
 
+// Lab 10 - Exceptions
 /*/
 void functionC() {
 	
@@ -389,6 +387,7 @@ int main() {
 }
 
 */
+
 
 
 // Lab 11 - Inheritance
@@ -430,6 +429,7 @@ int main() {
 	Inherit();
 	Child();
 } */
+
 
 
 // Lab 12 - Polymorphism
@@ -570,10 +570,8 @@ int main() {
 } */
 
 
+
 // Lab 16 Intermediate STL
-
-
-
 /*
 int main() {
 	cout << "using std::mismatch:     ";

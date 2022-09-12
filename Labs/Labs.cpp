@@ -508,7 +508,7 @@ int main() {
 
 
 // Lab 13 - Function Templates
-
+/*
 template<typename T>
 
 auto twice(T x) {
@@ -532,4 +532,76 @@ int main() {
 
 	cts<cstring> o;
 	o.p();
+} */
+
+
+
+//Lab 14 Class Templates
+/*
+template<typename T>
+
+class Wrapper {
+
+public:
+	Wrapper(T i) {}
+
+	void print() {
+		cout << i;
+	}
+
+	template<typename U>
+	friend std::ostream& operator<<(std::ostream& os, const Wrapper<U>& x);
+};
+
+template<typename T>
+std::ostream& operator<<(std::ostream& os, const Wrapper<T>& x) {
+	x.print();
+	return os;
 }
+
+
+
+int main() {
+
+	Wrapper<int> w{ 2 };
+	Wrapper<string>  s{ "Hello world!" };
+	cout << w  << " " << s << endl;
+
+} */
+
+
+// Lab 16 Intermediate STL
+
+
+
+/*
+int main() {
+	cout << "using std::mismatch:     ";
+	std::vector<int> vector1 = { 1, 14, 89, 55 };
+	std::vector<int> vector2 = { 1, 14, 65, 55 };
+
+	std::pair<std::vector<int>::iterator,
+	std::vector<int>::iterator > itr;
+
+	itr = std::mismatch(vector1.begin(), vector1.end(), vector2.begin());
+
+	cout << "Found mismatch -> " << *itr.first << ", " << * itr.second;
+
+
+	cout << std::endl;
+
+	cout << "using adjacent_find:     ";
+
+	int array[] = { 5, 898, 2, 3, 55, 55, 8 };
+
+	int n = sizeof(array) / sizeof(array[0]);
+
+	int* it = std::adjacent_find(array, array + n);
+
+	cout << "Adjacent's found -> " << *it;
+	
+} */
+
+
+
+// Lab 17 - Recursion

@@ -433,3 +433,74 @@ int main() {
 
 
 // Lab 12 - Polymorphism
+
+class Base {
+public:
+	virtual void fooVirtual() const { cout << "Base class virtual function\n"; }
+	void fooNotVirtual() const { cout << "Base class non-virtual function\n"; }
+};
+
+class Derived : public Base {
+public:
+	void fooVirtual() const override { cout << "Derived class virtual function\n"; }
+	void fooNotVirtual() const { cout << "Derived class non-virtual function\n"; }
+};
+
+int main() {
+	Base b;
+	Derived d;
+
+	//  1) A base class pointer to the base class object.
+	Base* bPb = &b;
+
+	//  2) A base class pointer to the derived class object.
+	Base* bPd = &d;
+
+	//  3) A derived class pointer to the derived class object.
+	Derived* dPd = &d;
+	//  4) A base class reference to the base class object.
+	Base obj_base;
+	Base* bRb = &obj_base;
+	//  5) A base class reference to the derived class object.
+	Derived obj_derived;
+	Base* bRd = &obj_derived;
+	//  6) A derived class reference to the derived class object.
+	Derived obj_dtd;
+	Derived* dRd = &obj_dtd;
+
+	cout << "~Calling non-virtual function from Base class pointer to base: ";
+	bPb->fooNotVirtual();
+
+	cout << "~Calling virtual function from Base class pointer to base: ";
+	bPb->fooVirtual();
+
+	cout << "~Call non virtual from Base to Derived: ";
+	bPd->fooNotVirtual(); // Polymorphed
+	cout << "~Call virtual from Base to Derived: ";
+	bPd->fooVirtual(); // Polymorphed
+
+	cout << "~Call non virtual Derived to Derived: ";
+	dPd->fooNotVirtual();
+	cout << "~Call virtual Derived to Derived: ";
+	dPd->fooVirtual();
+
+	cout << "~Reference non virt Base-Base: ";
+	bRb->fooNotVirtual();
+	cout << "~Reference virt Base-Base: ";
+	bRb->fooVirtual();
+	
+	cout << "~Reference non virt Base-Derive: ";
+	bRd->fooNotVirtual(); // Polymorph
+	cout << "~Reference virt Base-Derive: ";
+	bRd->fooVirtual(); // Polymorph
+
+	cout << "~Reference non virt Derive-Derive: ";
+	dRd->fooNotVirtual();
+	cout << "~Reference virt Derive-Derive: ";
+	dRd->fooVirtual();
+
+	//Call both functions from pointers 2-6
+
+	return 0;
+
+}

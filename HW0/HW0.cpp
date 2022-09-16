@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string> 
 #include <stdio.h>
-#include "JekyllHyde.h"
+
 
 
 // ------------------------------------------------------- HW0 Main Program - C to F calculator -------------------------------
@@ -62,7 +62,7 @@ int main(int argc, const char* argv[]) {
 
 
 // This will print the entire last chapter of The Strange Case of Dr. Jekyll and Mr. Hyde
-
+#include "JekyllHyde.h"
 int main() {
 	readingQuiz();
 }

@@ -116,6 +116,12 @@ int main() {
 
 
 
+
+
+
+
+
+
 // Lab 2 - Constructors and Destructors
 /*#include "Lab2.h"
 
@@ -143,6 +149,15 @@ int main() {
 
 
 } */
+
+
+
+
+
+
+
+
+
 
 
 
@@ -222,6 +237,14 @@ int main() {
 
 
 
+
+
+
+
+
+
+
+
 // Lab 4 - Streams
 /*
 #include <fstream>
@@ -251,6 +274,14 @@ int main() {
 
 } 
 */
+
+
+
+
+
+
+
+
 
 
 
@@ -292,6 +323,14 @@ int main() {
 
 
 
+
+
+
+
+
+
+
+
 // Lab 6 - Catch2
 
 // Lab 6a - Optional Namespace
@@ -305,6 +344,14 @@ int main() {
 
 
 } */
+
+
+
+
+
+
+
+
 
 
 
@@ -336,6 +383,14 @@ int main() {
 
 
 
+
+
+
+
+
+
+
+
 // Lab 9 - Overload Arithmetic ( WIP )
 /*
 main() {
@@ -350,8 +405,16 @@ main() {
 
 
 
+
+
+
+
+
+
+
+
 // Lab 10 - Exceptions
-/*/
+/*
 void functionC() {
 	
 	std::vector<int> vect;
@@ -387,6 +450,14 @@ int main() {
 }
 
 */
+
+
+
+
+
+
+
+
 
 
 
@@ -429,6 +500,14 @@ int main() {
 	Inherit();
 	Child();
 } */
+
+
+
+
+
+
+
+
 
 
 
@@ -507,6 +586,14 @@ int main() {
 
 
 
+
+
+
+
+
+
+
+
 // Lab 13 - Function Templates
 /*
 template<typename T>
@@ -536,28 +623,49 @@ int main() {
 
 
 
-//Lab 14 Class Templates
-/*
-template<typename T>
 
+
+
+
+
+
+
+
+//Lab 14 Class Templates
+
+template<class T>
+class Wrapper;
+
+template<class T>
+std::ostream& operator << (std::ostream & os, const Wrapper<T>&x);
+
+template<class T>
 class Wrapper {
+	
 
 public:
-	Wrapper(T i) {}
+	Wrapper(T in)
+		: i(in) {}
 
-	void print() {
-		cout << i;
+	friend std::ostream& operator<< (std::ostream& os, const Wrapper<T>& x) {
+		os << x.i;
+		return(os);
 	}
 
-	template<typename U>
-	friend std::ostream& operator<<(std::ostream& os, const Wrapper<U>& x);
+
+private:
+	T i;
+
 };
 
-template<typename T>
-std::ostream& operator<<(std::ostream& os, const Wrapper<T>& x) {
-	x.print();
-	return os;
+template<class T>
+std::ostream& operator<<(std::ostream& os, const Wrapper<T>& x)
+{
+	os << x.i;
+
 }
+
+
 
 
 
@@ -567,7 +675,15 @@ int main() {
 	Wrapper<string>  s{ "Hello world!" };
 	cout << w  << " " << s << endl;
 
-} */
+} 
+
+
+
+
+
+
+
+
 
 
 

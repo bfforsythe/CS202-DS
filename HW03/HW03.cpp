@@ -182,6 +182,8 @@ int main(int argc, char**argv) {
 
 // HW03 A3 - OpenGL
 
+
+
 #include <windows.h>
 #include <GLFW/glfw3.h>
 
@@ -218,4 +220,4 @@ int main(){
 
 	glfwTerminate();
 	return 0;
-}
+} 

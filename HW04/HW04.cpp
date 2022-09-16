@@ -50,7 +50,7 @@ int main() {
 
 
 // HW04 A1 - Hunt the Wump
-
+/*
 #include <algorithm>
 #include <random>
 #include "Wump.h"
@@ -58,24 +58,24 @@ int main() {
 
 
 
-int main() {
+int main()
+{
 	srand(unsigned(time(0)));
-
-
-
-
+	Map game;
+	game.generate();
+	game.play();
+	//game.printState();
 }
 
 
 
-
-
+*/
 
 
 
 // HW04 A2 - Speed Coding
 
-/*
+
 #include "Streams.h"
 #include "Containers.h"
 #include "Memory.h"
@@ -115,4 +115,4 @@ int main() {
 	cout << "Pointers currently exist: " << *eee << ", " << *ptr;
 
 
-} */
+} 

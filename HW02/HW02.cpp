@@ -124,7 +124,7 @@ int main() {
 
 // HW02 A1 - Lowercase Letters
 
-/*
+
 
 void to_lower(char* s) {
 
@@ -152,11 +152,13 @@ int main() {
 	cout << b;
 
 	return(0);
-} */
+} 
 
 
 
 // HW02A2 - Cave Spelunking
+
+/*
 bool gameOver = false;
 
 class Controller {  // This class controls initial generation and player movement
@@ -238,3 +240,5 @@ int main() {
 	game.movement(1);
 	return(0);
 }
+
+*/

@@ -9,7 +9,7 @@
 
 
 // ------------------------------------------------------ HW01 Main Stopwatch Timer -----------------------------------------
-/*
+
  using namespace std::chrono;
 
 
@@ -38,7 +38,8 @@ class StopWatch {
 
 };
 
-/*void VectorCreator(int size) {
+/*
+void VectorCreator(int size) {
 
 	std::vector<int> searchable;
 
@@ -66,17 +67,17 @@ int main() {
 	VectorCreator(10005);
 
 	brandDeal.Stop();
-} */
+} 
 
 
-
+*/
 
 
 
 
 // -------------------------------------------------------- HW01A1 Audible Too -----------------------------------------------
 
-/*
+
 int main() {
 
 	StopWatch brandDeal;
@@ -98,4 +99,4 @@ int main() {
 	brandDeal.Stop();
 
 
-} */
+} 

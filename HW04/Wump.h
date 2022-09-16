@@ -29,22 +29,22 @@ struct Room
 
 class Player
 {
-    std::vector<int> adjacent{ std::vector<int>(3) };
+    std::vector<int> nearby{ std::vector<int>(3) };
     int inRoom;
     void setAdjRooms();
 public:
     void setCurrRoom(int r) { inRoom = r; setAdjRooms(); }
 
     int room() const { return inRoom; }
-    int getAdj(int i) const { return adjacent[i]; }
+    int getAdj(int i) const { return nearby[i]; }
 };
 
 void Player::setAdjRooms()
 {
     int t = 2 + 2 * (inRoom & 1);
-    adjacent[0] = rooms - 1 - inRoom;
-    adjacent[1] = (inRoom + t) % rooms;
-    adjacent[2] = (15 - t - inRoom) % rooms;
+    nearby[0] = rooms - 1 - inRoom;
+    nearby[1] = (inRoom + t) % rooms;
+    nearby[2] = (15 - t - inRoom) % rooms;
 }
 
 class Generator
@@ -136,29 +136,38 @@ int Generator::movePlayer(int pos)
 
 }
 
-int Generator::moveWump()
-//move wump
+int Generator::moveWump()//move wump
+
 {
     int r = rand() % 3;
     int p = 0;
     for (; !(cave[p].wump); p++); 
+
     cave[p].wump = false;
-    if ((cave[p].wump && !(cave[p].bat)) || (cave[p].wump && !(cave[p].pit)))
+
+
+    if ((cave[p].wump && !(cave[p].bat)) || (cave[p].wump && !(cave[p].pit))) {
         vacant.push_back(p);
+    }
+
+
     cave[cave[p].adjacent[r]].wump = true;
     if (cave[cave[p].adjacent[r]].player) {
         std::cout << "You've been wumped :(" << std::endl;
         return gameOver;
     }
+
+
     return 0;
 }
 
-int Generator::shoot(int pew)
-{
+int Generator::shoot(int pew){
     if (cave[pew].wump) {
         std::cout << "WUMP DEAD - KILL CONFIRMED" << std::endl;
         return gameOver;
+
     }
+
     else if (cave[p.getAdj(0)].wump || cave[p.getAdj(1)].wump || cave[p.getAdj(2)].wump)
         return moveWump();
 }
@@ -167,9 +176,12 @@ void Generator::batLuck() // trigger after bat is hit
 {
     int r = rand() % vacant.size();
     cave[p.room()].player = false;
-    vacant.push_back(p.room());
     cave[vacant[r]].player = true;
+
+    vacant.push_back(p.room());
+
     p.setCurrRoom(vacant[r]);
+
     vacant.erase(vacant.begin() + r);
 }
 
@@ -177,9 +189,11 @@ void Generator::generate() // plays god
 {
     for (int i = 0; i < rooms; ++i) {
         int t = 2 + 2 * (i & 1);
+
         cave[i].adjacent[0] = rooms - 1 - i;
         cave[i].adjacent[1] = (t + i) % rooms;
         cave[i].adjacent[2] = (15 - t + i) % rooms;
+
         vacant.push_back(i);
     }
 
